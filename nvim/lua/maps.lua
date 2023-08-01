@@ -1,0 +1,45 @@
+local keymap = vim.keymap
+
+-- Do not yank with x
+
+-- Increment/decrement
+keymap.set('n', '+', '<C-a>') -- shift +
+keymap.set('n', '-', '<C-x>') -- only -
+
+-- Delete a word backwards
+keymap.set('n', 'dw', 'vb"_d')
+
+-- Select all
+keymap.set('n', '<C-a>', 'gg<S-v>G')
+
+-- Explorer
+keymap.set('n', '<Space>e', ':e .<Return>', { silent = true })
+
+-- New tab
+keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+
+-- Buffer 
+keymap.set('n', 'gh', ':bnext<Return>', { silent = true })
+keymap.set('n', 'gl', ':ball<Return>',  { silent = true })
+keymap.set('n', 'gq', ':bd<Return>',  { silent = true })
+
+-- Split window
+keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
+keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
+
+-- Move window
+keymap.set('n', '<Space>', '<C-w>w')
+keymap.set('', 's<left>', 'C-w>h')
+keymap.set('', 's<up>', '<C-w>k')
+keymap.set('', 's<down>', '<C-w>j')
+keymap.set('', 's<right>', '<C-w>l')
+keymap.set('', 'sh', '<C-w>h')
+keymap.set('', 'sk', '<C-w>k')
+keymap.set('', 'sj', '<C-w>j')
+keymap.set('', 'sl', '<C-w>l')
+
+-- Resize window
+keymap.set('n', '<C-w><left>', '<C-w><')
+keymap.set('n', '<C-w><right>', '<C-w>>')
+keymap.set('n', '<C-w><up>', '<C-w>+')
+keymap.set('n', '<C-w><down>', '<C-w>-')
