@@ -9,6 +9,6 @@ Steps to follow:
 
 ## Dependencies 
 
-npm install typescript typescript-language server
-npm install tree-sitter
-npm install -g @fsouza/prettierd
+* npm install typescript typescript-language server
+* npm install tree-sitter
+* npm install -g @fsouza/prettierd
