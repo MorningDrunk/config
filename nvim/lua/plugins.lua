@@ -39,4 +39,6 @@ packer.startup(function(use)
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'nvim-telescope/telescope.nvim' -- Telescope finder
   use 'nvim-telescope/telescope-file-browser.nvim' -- Telescope file finder
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 end)

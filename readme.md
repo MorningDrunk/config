@@ -6,3 +6,9 @@ Steps to follow:
 * copy the `powershell` folder to `C:Users\username\.config\`
 * open the current powershell profile found at the location `$PROFILE` and change the powershell profile location by adding 
 `. $env:USERPROFILE\.config\powershell\user_profile.ps1`
+
+## Dependencies 
+
+npm install typescript typescript-language server
+npm install tree-sitter
+npm install -g @fsouza/prettierd

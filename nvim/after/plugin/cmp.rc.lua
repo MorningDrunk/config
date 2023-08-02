@@ -2,9 +2,13 @@ local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require 'lspkind'
 
+require('luasnip').filetype_extend("javascript", { "javascriptreact" })
+require('luasnip').filetype_extend("javascript", { "html" })
+require("luasnip.loaders.from_vscode").lazy_load()
+
 cmp.setup ({
   snippet = {
-    expand = function(args) 
+    expand = function(args)
       require('luasnip').lsp_expand(args.body)
     end
   },
@@ -17,6 +21,7 @@ cmp.setup ({
     }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    {name = 'luasnip'},
     { name = 'buffer' },
   }),
   formatting = {
